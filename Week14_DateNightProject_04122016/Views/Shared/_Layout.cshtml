@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Date Night Cleveland App</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <!--    Thought I might need this but using Site.css instead
+    <link href="~/DateNightModelIndexSS.css" rel="stylesheet" type="text/css" />
+    -->
+    <link href='https://fonts.googleapis.com/css?family=Karma|IM+Fell+English+SC|Poppins' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lobster|Pacifico|Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body class="body-content">
+    <div class="DNMHeader">
+        <h1><img src="~/Images/date-night-logo1.jpg" height="150"/><span id="cleveland">cleveland</span></h1>
+    </div>
+
+    @RenderBody()
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

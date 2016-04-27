@@ -1,0 +1,117 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Customize Site.css by J. Evans */
+
+/* Date Night Model Index */
+body{
+    padding-top:0px;
+    background:transparent url(/Images/colorful-heart-wallpaper-mobile.jpg) fixed no-repeat;
+    background-size:cover;
+}
+
+.view-title{
+    color:white;
+    font-family:'Amatic';
+    background-color:#f05171;
+    border-radius:10px;
+    
+    padding-left:20px;
+        /*
+    padding-bottom:2px;
+    padding-top:2px;
+    margin:15px;
+
+    */
+}
+
+.DNMHeader{
+    height:150px;
+    width:100%;
+    background-color:black;
+    padding-left:20px;
+    border-radius:20px;
+}
+
+#cleveland{
+    font-size:72px;
+    color:#f05171;
+    font-family:'Comic Sans MS';
+    position:absolute;
+    top:50px;
+    right:50px;
+    letter-spacing:30px;
+}
+.DNMIndexType{
+    background-color:palevioletred;
+    font-size:16px;
+    margin-left:50px;
+}
+
+.thumbnail{
+    height:540px;
+    margin:10px;
+}
+
+.link a{
+    color:black;
+}
+
+#type{
+    font-family: 'Poppins';
+    color:blue;
+}
+
+#title{
+    width:90%;
+    color:darkgreen;
+    font-family:'Lobster';
+    font-size:32px;
+}
+.thumbnail .caption{
+    position:absolute;
+    top: 220px;
+    padding: 10px;
+}
+
+.thumbnail .caption #title{
+    height:60px;
+}
+
+.DNMForm{
+    background-color:#12b8aa;
+    padding-bottom:20px;
+    padding-top:20px;
+    font-family:'Poppins';
+    border-radius:20px;
+}
+
+.DVNForm.form-group{
+    width:800px;
+}
+
+#cost{
+
+}
