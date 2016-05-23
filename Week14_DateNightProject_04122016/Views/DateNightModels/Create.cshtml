@@ -15,10 +15,6 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal DNMForm">
-        <!--
-            <h4>DateNightModel</h4>
-        <hr />
-        -->
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -31,40 +27,26 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-2" })
 
-            <div class="dropdown col-md-10">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+            <div class="col-md-10"> 
+                <select
                     @Html.EditorFor(model => model.Type, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a href="#">HTML</a></li>
-                    <li><a href="#">CSS</a></li>
-                    <li><a href="#">JavaScript</a></li>
-                    <li>Test</li>
-                </ul>
+                    @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })>
+                    <option selected>Select a Type:</option>
+                    <option>Sports</option>
+                    <option>Dining</option>
+                    <option>Food</option>
+                    <option>Nature</option>
+                    <option>Adventure</option>
+                    <option>Romantic</option>
+                    <option>Entertainment</option>
+                    <option>Music</option>
+                    <option>Museum</option>
+                    <option>Travel</option>
+                    <option>Family</option>
+                    <option>Educational</option>
+                </select>
             </div>
         </div>
-
-            <!-- Original Type form control
-        <div class="form-group">
-            @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Type, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        -->
-            <!--
-        <div class="form-group">
-            @Html.LabelFor(model => model.FullAddress, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.FullAddress, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.FullAddress, "", new { @class = "text-danger" })
-            </div>
-        </div>
-        -->
 
             <div class="form-group">
                 @Html.LabelFor(model => model.Street, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -137,7 +119,6 @@
             </div>
         </div>
 }
-
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

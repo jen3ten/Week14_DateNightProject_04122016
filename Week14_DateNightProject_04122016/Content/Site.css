@@ -39,12 +39,6 @@ body{
     border-radius:10px;
     
     padding-left:20px;
-        /*
-    padding-bottom:2px;
-    padding-top:2px;
-    margin:15px;
-
-    */
 }
 
 .DNMHeader{
@@ -110,8 +104,4 @@ body{
 
 .DVNForm.form-group{
     width:800px;
-}
-
-#cost{
-
 }

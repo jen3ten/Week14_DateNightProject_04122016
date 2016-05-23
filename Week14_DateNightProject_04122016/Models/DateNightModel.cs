@@ -58,22 +58,11 @@ namespace Week14_DateNightProject_04122016.Models
         public string Photo { get; set; }
 
         [Display(Name = "Website")]
-        /*[DataType(DataType.Url)]*/
         public string Website { get; set; }
 
         [Display(Name = "Cost per Person")]
         [Range(0, 1000, ErrorMessage = "Cost must be between $0.00 and $1000.00")]
         [DataType(DataType.Currency)]
         public double Cost { get; set; }
-
-        /*Methods*/
-        public void OrderByTypeTitle()
-        {
-        }
-
-        List<string> typeList = new List<string>{"Nature", "Sports", "Restaurant", "Adventure", "Romantic", "Entertainment", "Music", "Museum", "Travel", "Family", "Educational"};
-        /*typeList.Sort();  why doesn't this work?*/
-
-
     }
 }

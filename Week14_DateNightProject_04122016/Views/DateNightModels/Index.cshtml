@@ -4,10 +4,6 @@
     ViewBag.Title = "Index";
 }
 
-<!--
-<h2>Index</h2>
--->
-
 <!--    Thought I might need this but using Site.css instead
 <link href="~/DateNightModelIndexSS.css" rel="stylesheet" type="text/css" />
 <link href='https://fonts.googleapis.com/css?family=Karma|IM+Fell+English+SC|Poppins' rel='stylesheet' type='text/css'>
@@ -20,25 +16,6 @@
 
 @foreach (var item in Model)
 {
-    <!-- This didn't work very well...
-        
-    <div class="DNMIndexType col-md-4">
-        @Html.DisplayFor(modelItem => item.Title)
-        <img src="@Html.DisplayFor(modelItem => item.Photo)" width="300"/><br />
-        <a href="@Html.DisplayFor(modelItem => item.Website)">@Html.DisplayFor(modelItem => item.Title)</a>
-
-    </div>
-    <div class="DNMIndexType col-md-4">
-        @Html.DisplayFor(modelItem => item.Type)<br />
-        @Html.DisplayFor(modelItem => item.Street)<br />
-        @Html.DisplayFor(modelItem => item.City) 
-        @Html.DisplayFor(modelItem => item.State)
-        @Html.DisplayFor(modelItem => item.Zip)<br />
-        @Html.DisplayFor(modelItem => item.PhoneNum)
-
-    </div>
-    -->
-
     <div>
         <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
@@ -64,97 +41,4 @@
             </div>
         </div>
     </div>
-
 }
-
-<!--
-    
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.RecordNum)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Type)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FullAddress)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Street)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.City)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.State)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Zip)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PhoneNum)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Photo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Website)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Cost)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.RecordNum)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Type)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FullAddress)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Street)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.City)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.State)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Zip)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PhoneNum)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Photo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Website)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cost)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.RecordNum }) |
-            @Html.ActionLink("Details", "Details", new { id=item.RecordNum }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.RecordNum })
-        </td>
-    </tr>
-}
-
-</table>
--->
