@@ -27,13 +27,37 @@
             </div>
         </div>
 
-        <div class="form-group">
+        @*<div class="form-group">
             @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Type, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
             </div>
+        </div>*@
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-2" })
+
+            <div class="col-md-10">
+                <select @Html.EditorFor(model => model.Type, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })>
+                    <option selected>@Model.Type</option>
+                    <option>Sports</option>
+                    <option>Dining</option>
+                    <option>Food</option>
+                    <option>Nature</option>
+                    <option>Adventure</option>
+                    <option>Romantic</option>
+                    <option>Entertainment</option>
+                    <option>Music</option>
+                    <option>Museum</option>
+                    <option>Travel</option>
+                    <option>Family</option>
+                    <option>Educational</option>
+                </select>
+            </div>
         </div>
+
 
         <div class="form-group">
             @Html.LabelFor(model => model.Street, htmlAttributes: new { @class = "control-label col-md-2" })

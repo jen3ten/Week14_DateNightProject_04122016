@@ -15,9 +15,16 @@ namespace Week14_DateNightProject_04122016.Controllers
         private Week14_DateNightProject_04122016Context db = new Week14_DateNightProject_04122016Context();
 
         // GET: DateNightModels
-        public ActionResult Index()
+        public ActionResult Index(string search)
         {
-            return View(db.DateNightModels.ToList());
+            if(search != null)
+            {
+                return View(db.DateNightModels.Where(x => x.Title.Contains(search) || x.Type.Contains(search)).OrderBy(x => x.Title).ToList());
+            }
+            else
+            {
+                return View(db.DateNightModels.OrderBy(x => x.Title).ToList());
+            }
         }
 
         // GET: DateNightModels/Details/5

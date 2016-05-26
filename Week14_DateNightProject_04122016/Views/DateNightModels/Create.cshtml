@@ -31,7 +31,7 @@
                 <select
                     @Html.EditorFor(model => model.Type, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })>
-                    <option selected>Select a Type:</option>
+                    <option selected disabled>Select a Type:</option>
                     <option>Sports</option>
                     <option>Dining</option>
                     <option>Food</option>

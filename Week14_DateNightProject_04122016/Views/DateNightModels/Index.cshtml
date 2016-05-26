@@ -4,14 +4,22 @@
     ViewBag.Title = "Index";
 }
 
-<!--    Thought I might need this but using Site.css instead
-<link href="~/DateNightModelIndexSS.css" rel="stylesheet" type="text/css" />
-<link href='https://fonts.googleapis.com/css?family=Karma|IM+Fell+English+SC|Poppins' rel='stylesheet' type='text/css'>
--->
-
-<div class="view-title">
-    <h2>View Date Ideas</h2>
-    <h4 class="link">@Html.ActionLink("Click Here To Add New Idea", "Create")</h4>
+<div class="container-fluid view-title">
+    <div class="row" id="row-index">
+        <div class="col-sm-6 col-md-6">
+            <h2 id="h2-index">View Date Ideas</h2>
+            <h4 class="link" id="h4-index">@Html.ActionLink("Click Here To Add New Idea", "Create") </h4>
+        </div>
+        <div class="col-sm-6 col-md-2" id="reset-index">
+            <h4 class="link" id="reset-link">@Html.ActionLink("Clear Search", "Index", "DateNightModels")</h4>
+        </div>
+        <div class="col-sm-6 col-md-4" id="search-index">
+            @using (Html.BeginForm("Index", "DateNightModels", FormMethod.Get))
+            {
+                @Html.TextBox("search") <input type="submit" value="Search Date Titles or Types" />
+            }
+        </div>
+    </div>
 </div>
 
 @foreach (var item in Model)
@@ -31,7 +39,10 @@
                         @Html.DisplayFor(modelItem => item.Zip)<br />
                         @Html.DisplayFor(modelItem => item.PhoneNum)
                     </p>
-                    <p><a href="@Html.DisplayFor(modelItem => item.Website)" target="_blank" class="btn btn-primary" role="button">Visit Website</a></p>
+                    @if(item.Website != null)
+                    {
+                        <p><a href="@Html.DisplayFor(modelItem => item.Website)" target="_blank" class="btn btn-primary" role="button">Visit Website</a></p>
+                    }
                     <p>
                         @Html.ActionLink("Edit", "Edit", new { id = item.RecordNum }) | 
                         @Html.ActionLink("Details", "Details", new { id = item.RecordNum }) | 

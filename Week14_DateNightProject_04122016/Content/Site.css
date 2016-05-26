@@ -37,7 +37,6 @@ body{
     font-family:'Amatic';
     background-color:#f05171;
     border-radius:10px;
-    
     padding-left:20px;
 }
 
@@ -104,4 +103,55 @@ body{
 
 .DVNForm.form-group{
     width:800px;
+}
+
+h4.link{
+    color:black;
+}
+
+.delete-button{
+    margin-left:50px;
+}
+
+.delete-button:hover{
+    background-color:red;
+}
+
+.index-button {
+    margin:50px;
+    color:black;
+    font-size:30px;
+    background-color:#f05171;
+}
+
+.search-format{
+    float:right;
+}
+
+#h2-index{
+    margin-top:0px;
+}
+
+#row-index{
+    margin-top:20px;
+}
+
+#search-index{
+    margin-top:30px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#h4-index{
+    margin-bottom:0px;
+}
+
+#reset-index{
+    margin-top:30px;
+}
+
+#reset-link{
+    color:black;
+    float:right;
+    margin-bottom:0px;
 }
